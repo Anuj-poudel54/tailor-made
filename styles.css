@@ -8,12 +8,17 @@ body {
 }
 
 .container {
+    --form-check-input-checked-border-color: rgba(0, 0, 0, 0.2) ;
     max-width: 600px;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.tailormade-container {
+    container-type: inline-size;
 }
 
 .form {
@@ -44,13 +49,18 @@ select {
     border-radius: 3px;
 }
 
-button, input[type=submit] {
+button,
+input[type=submit] {
     padding: 10px 20px;
     background-color: #007BFF;
     color: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+}
+
+button.btn {
+    background-color: #f3685f !important;
 }
 
 .prev-btn {
@@ -66,8 +76,12 @@ button:hover {
 }
 
 
-.errormsg{
+.errormsg {
     color: red;
+}
+
+.form-check-input:checked{
+    background-color: #095A5B !important;
 }
 
 /* Step 1 styles */
@@ -90,7 +104,6 @@ button:hover {
     content: '';
     width: 100%;
     height: 100%;
-    /* background-color: red; */
     display: block;
     position: absolute;
     top: 0;
@@ -108,10 +121,13 @@ button:hover {
     font-weight: bold;
 }
 
-.country-label:hover {
-    outline: 5px solid #095A5B;
 
-    cursor: pointer;
+@media(hover: hover) {
+    .country-label:hover {
+        outline: 5px solid #095A5B;
+        cursor: pointer;
+    }
+
 }
 
 .country-label img {
@@ -140,21 +156,22 @@ h3 {
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
+@container (max-width: 540px) {
     .activities {
         grid-template-columns: repeat(3, 1fr);
     }
 
 }
 
-@media (max-width: 421px) {
+@container (max-width: 500px) {
     .activities {
         grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
-@media (max-width: 335px) {
+
+@container (max-width: 341px) {
     .activities {
         grid-template-columns: 1fr;
     }
@@ -166,26 +183,26 @@ h3 {
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
-.set-gap{
+.set-gap {
     gap: .5rem;
 }
 
-.traverllers input{
+.traverllers input {
     padding: 1rem;
 }
 
 
 /* Step 5 */
 
-.inputs{
+.inputs {
     flex-direction: column;
 }
