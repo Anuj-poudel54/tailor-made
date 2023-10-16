@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step {
+    display: none;
+}
+
+.step-1 {
+    display: block;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button, input[type=submit] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    background-color: #ccc;
+}
+
+.submit-btn {
+    background-color: #28a745;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.errormsg{
+    color: red;
+}
+
+/* Step 1 styles */
+
+.labels {
+    gap: 1rem;
+}
+
+.country-label {
+    position: relative;
+}
+
+.country-label {
+    border-radius: 16px;
+    overflow: hidden;
+
+}
+
+.country-label::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.country-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.6rem;
+    color: white;
+    font-weight: bold;
+}
+
+.country-label:hover {
+    outline: 5px solid #095A5B;
+
+    cursor: pointer;
+}
+
+.country-label img {
+    transition: all 300ms ease;
+}
+
+.country-label:hover img {
+    transform: scale(1.3);
+}
+
+h3 {
+    color: #095A5B;
+}
+
+.country-checked {
+    outline: 5px solid #095A5B;
+}
+
+/* Step 2 style */
+
+.activities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .activities {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 421px) {
+    .activities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 335px) {
+    .activities {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Step 4 style */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.set-gap{
+    gap: .5rem;
+}
+
+.traverllers input{
+    padding: 1rem;
+}
+
+
+/* Step 5 */
+
+.inputs{
+    flex-direction: column;
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailor Made</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="tailormade-form" name="tailormade-form" class="form">
+            <div class="step step-1">
+                <h3 class="text-center">Select Destination</h3>
+                <!-- Hidden inputs -->
+                <input type="checkbox" name="nepal" id="nepal" value="nepal" class="country hidden">
+                <input type="checkbox" name="bhutan" id="bhutan" value="bhutan" class="country hidden">
+                <input type="checkbox" name="tibet" id="tibet" value="tibet" class="country hidden">
+
+                <!-- Labels -->
+                <div class="labels my-4 d-flex">
+
+                    <label for="nepal" class="nepal-label country-label">
+                        <img src="./nepal.jpg" width="200px" alt="">
+                        <span class="country-text">Nepal</span>
+                    </label>
+                    <label for="bhutan" class="bhutan-label country-label">
+                        <img src="./bhutan.jpg" width="200px" alt="">
+                        <span class="country-text">Bhutan</span>
+                    </label>
+                    <label for="tibet" class="tibet-label country-label">
+                        <img src="./tibet.jpg" width="200px" alt="">
+                        <span class="country-text">Tibet</span>
+                    </label>
+                </div>
+
+                <div class="buttons text-center my-4">
+                    <button class="btn btn-primary next-btn disabled" onclick="nextStep(1)">Next</button>
+                </div>
+
+            </div>
+
+            <div class="step step-2">
+
+                <h3 class="text-center"> Preferred Activities </h3>
+                <div class="activities">
+                    <div class="form-check form-switch ">
+                        <input class="form-check-input" name="trekking" type="checkbox" id="trekking">
+                        <label class="form-check-label" for="trekking">Trekking</label>
+                    </div>
+
+                    <div class="form-check form-switch ">
+                        <input class="form-check-input" name="tour" type="checkbox" id="tour">
+                        <label class="form-check-label" for="tour">Tour</label>
+                    </div>
+
+                    <div class="form-check form-switch ">
+                        <input class="form-check-input" name="peak-climbing" type="checkbox" id="peak-climb">
+                        <label class="form-check-label" for="peak-climb">Peak Climbing</label>
+                    </div>
+
+                    <div class="form-check form-switch ">
+                        <input class="form-check-input" name="mountaineering" type="checkbox" id="mountaineering">
+                        <label class="form-check-label" for="mountaineering">Mountaineering</label>
+                    </div>
+
+                    <div class="form-check form-switch ">
+                        <input class="form-check-input" name="heli-trek" type="checkbox" id="heli-trek">
+                        <label class="form-check-label" for="heli-trek">Heli Trek</label>
+                    </div>
+
+
+                    <div class="form-check form-switch ">
+                        <input class="form-check-input" name="jungle-safari" type="checkbox" id="jungle-safair">
+                        <label class="form-check-label" for="jungle-safair">Jungle Safari</label>
+                    </div>
+
+                    <div class="form-check form-switch ">
+                        <input class="form-check-input" name="hiking" type="checkbox" id="hiking">
+                        <label class="form-check-label" for="hiking">Hiking</label>
+                    </div>
+
+                    <div class="form-check form-switch ">
+                        <input class="form-check-input" name="camping" type="checkbox" id="camping">
+                        <label class="form-check-label" for="camping">Camping</label>
+                    </div>
+
+                </div>
+                <!-- Buttons -->
+                <div class="buttons text-center my-4 ">
+                    <button class="btn btn-primary prev-btn" onclick="prevStep(2)">Previous</button>
+                    <button class="btn btn-primary next-btn disabled" onclick="nextStep(2)">Next</button>
+                </div>
+            </div>
+
+            <div class="step step-3">
+                <h3 class="text-center">Pick your perfect Day</h3>
+
+                <input type="date" id="date-picker" name="date-from-to" placeholder="Choose your starting date...">
+
+                <!-- Buttons -->
+                <div class="buttons text-center my-4 ">
+                    <button class="btn btn-primary prev-btn" onclick="prevStep(3)">Previous</button>
+                    <button class="btn btn-primary next-btn disabled" onclick="nextStep(3)">Next</button>
+                </div>
+            </div>
+
+            <div class="step step-4">
+                <h3 class="text-center my-4">How many are you there?</h3>
+
+                <div class="traverller-number d-flex set-gap">
+                    <div class="adult traverllers">
+                        <label for="adult">Adult</label>
+                        <input type="number" name="number-of-adult" min="1" value="1" id="adult">
+                    </div>
+
+                    <div class="child traverllers">
+                        <label for="child">Children</label>
+                        <input type="number" name="number-of-children" min="0" value="0" id="child">
+                    </div>
+                </div>
+
+                <div class="hotel-class my-4">
+                    <select class="form-select" name="hotel-class" size="5" aria-label="hotel class selection">
+                        <option disabled>
+                            <h3>Hotel Class</h3>
+                        </option>
+                        <option value="5 star hotel">⭐⭐⭐⭐⭐</option>
+                        <option value="4 star hotel">⭐⭐⭐⭐</option>
+                        <option selected value="3 star hotel">⭐⭐⭐</option>
+                        <option value="2 star hotel">⭐⭐</option>
+                    </select>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="buttons text-center my-4 ">
+                    <button class="btn btn-primary prev-btn" onclick="prevStep(4)">Previous</button>
+                    <button class="btn btn-primary next-btn" onclick="nextStep(4)">Next</button>
+                </div>
+
+            </div>
+
+
+            <div class="step step-5">
+                <h3>Personal Details</h3>
+
+                <div class="inputs d-flex set-gap">
+
+                    <div class="d-flex set-gap">
+
+                        <input type="radio" class="btn-check" name="mr" id="mr" autocomplete="off"
+                            checked>
+                        <label class="btn btn-outline-secondary" for="mr">Mr.</label>
+
+                        <input type="radio" class="btn-check" name="mrs" id="mrs" autocomplete="off">
+                        <label class="btn btn-outline-secondary" for="mrs">Mrs.</label>
+
+                        <label for="full-name" hidden>Full Name: </label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Full name">
+                    </div>
+
+                    <label for="email" hidden>Email: </label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+
+                    <label for="phone" hidden>Phone: </label>
+                    <input type="tel" id="phone" name="phone-skype" placeholder="Phone/Skype number">
+
+                    <label for="nationality" hidden>Nationality: </label>
+                    <input type="text" id="nationality" name="nationality" placeholder="Nationality">
+
+                    <div class="contact-way my-3">
+                        <h5>Best way to contact you: </h5>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input contact-way-checkbox" name="best-via-email" type="checkbox" id="via-email" value="email">
+                            <label class="form-check-label" for="via-email">Email</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input contact-way-checkbox" name="best-via-phone" type="checkbox" id="via-phone" value="phone">
+                            <label class="form-check-label" for="via-phone">Phone</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input contact-way-checkbox" name="best-via-skype" type="checkbox" id="via-skype" value="skype">
+                            <label class="form-check-label" for="via-skype">Skype</label>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="buttons text-center my-4 ">
+                            <button class="btn btn-primary prev-btn" onclick="prevStep(5)">Previous</button>
+                            <button class="btn btn-primary next-btn" >Next</button>
+                        </div>
+                        <strong class="errormsg"></strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="step step-6">
+
+                <h3 class="text-center my-3">Finally!</h3>
+
+                <textarea name="interest" class="form-control" id="" cols="40" placeholder="Tell us more about you. What you are particularly interested in; anything that can help us help you." rows="5"></textarea>
+                
+                <label for="found-by" hidden>How did you find us?</label>
+                <select class="form-select form-select-lg my-3" name="found-by" id="found-by"
+                    aria-label=".form-select-lg example">
+                    <option selected disabled>How Did You Find Us?</option>
+                    <option value="search engine">Search Engine</option>
+                    <option value="friends">Friends</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="trip advisor">Trip Advisor</option>
+                </select>
+
+                <!-- Buttons -->
+                <div class="buttons text-center my-4 ">
+                    <button class="btn btn-primary prev-btn" onclick="prevStep(6)">Previous</button>
+                    <button class="btn btn-success submit-btn">Submit</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
